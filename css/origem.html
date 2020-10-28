@@ -5,12 +5,18 @@
     <meta charset="UTF-8">
     <title>Origem CSS: Externo, Interno e Inline</title>
     <style>
-        /* ... */
+        body {
+            background-color:cadetblue;
+        }
     </style>
+
+    <!-- Obs. "rel" = significa o tipo de relação que esse link terá com essa página e a propriedade "styçesheet" quer dizer que sua relação é uma folha de estilo -->
+    <link rel="stylesheet" href="css/externo.css">
 </head>
 
 <body>
-    <h1>E agora?</h1>
+    <!-- Não é recomendado colocar propriedades inline: -->
+    <h1 style="background-color: coral; font-weight: bold; color: cornsilk;" >E agora?</h1>
 </body>
 
 </html>
