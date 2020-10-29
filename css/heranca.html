@@ -5,7 +5,22 @@
     <meta charset="UTF-8">
     <title>Herança</title>
     <style>
-        /* ... */
+        /* Pela heranca foi transmitido o estilo para as tags h1 e div dentro da tag body, sendo que a borda e o padding não foi herdadas, pois por padrão elas não são transmitidas por herança */
+        body {
+            font-family: monospace;
+            font-size: 20px;
+            border: solid 3px red;
+            padding: 40px;
+            background-color: lightblue;
+        }
+
+        /*Palavra reservada para herdar explicitamente algo que nao e herdada por padrao e a: "inherit"*/
+        div {
+            border: inherit;
+            padding: inherit;
+            background-color: lightcyan;
+        }
+
     </style>
 </head>
 
