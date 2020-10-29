@@ -6,11 +6,41 @@
     <title>Especificidade CSS</title>
     <style>
         /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
+        /*
+            Em linhas gerais...
+                1. Regra: com !important (Não é recomendado utiliza-la, pois acaba gerando um ciclo vicioso no código) ( Quando a regra !important é utilizada na declaração do estilo substitui qualquer outra declaração feita no CSS, onde quer que esteja na lista de declaração. Contudo, !important não tem nada a ver com especificação. )
+
+                2. Regra: seletores mais especificos
+
+                3. Regra: No caso de impate a última regra processada será priorizada
+        */
+
+        /* Esse .observacao é mais específico do que o "p" por isso mesmo ele sendo declarado antes do "p" ele continuará com maior prioridade por ser mais especifico */
+        .observacao {
+            background: linear-gradient(to right, red, rgb(255, 174, 0)); /*linear-gradient() Aplica gradiente*/
+            border: solid 5px rgb(255, 1, 1);
+            padding: 20px; /*Seguindo a regra de especificadade esse padding será substituido pelo padding do p.observacao pois ele e mais especifico e terá maior prioridade */
+            font-size: 40px;
+            text-align: center;
+            font-weight: bold;
+            color: white;
+            font-family: cursive;
+        }
+        
+        p {
+            background-color: #aaa;
+        }
+
+        /*Ja nesse caso a classe p.observacao é ainda mais especifica do que a .observacao então ela terá prioridade ao ser executada e substituirá os estilos da .obervacao */
+        p.observacao {
+            padding: 5px 60px;
+        }
+
     </style>
 </head>
 
 <body>
-    <p class='observacao'>Olha essa observação!!!!</p>
+    <p class='observacao'>Especificidade parte 01</p>
 </body>
 
 </html>
