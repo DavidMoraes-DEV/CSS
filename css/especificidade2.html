@@ -3,14 +3,33 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Especificidade CSS</title>
+    <title>Especificidade CSS Parte 02</title>
     <style>
-        /* https://specificity.keegan.st/ */
+        /* Calculadora de Especificidade do CSS: https://specificity.keegan.st/ */
+        /*
+            1. Inline
+            2. ID
+            3. Classe, Pseudo-Classe, atributo
+            4. Elemento, Pseudo-Elementos
+        */
+
+        body {font-size: 20px;}
+
+        div { background-color: #00B; color: #fff; }
+
+        div:hover { background-color: purple; }
+
+        div[wm-cor] { background-color: darkorange; }
+        
+        div.estilo { background-color: green; }
+
+        #unico1, #unico2 { background-color: #000; }
     </style>
 </head>
 
 <body>
-    <div id="unico1" class="estilo">
+    <div><h1> Aplicando Regras de Especificidade do CSS </h1></div>
+    <div id="unico1" class="estilo" style="background-color: red;">
         #unico1 vs .estilo vs inline
     </div>
     <div id="unico2" class="estilo">#unico2 vs .estilo</div>
