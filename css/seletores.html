@@ -6,7 +6,63 @@
     <title>CSS Selectors</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        /*Seletor Adjacente: (exemplo:) "p + ul" (Um esta em seguida do outro)*/
+        p + ul {
+            background-color:gold;
+        }
+        
+        /* Seletor Universal: "*" */
+        * {
+            background-color: white;
+        }
+
+        /* Seletor de Classe: "."nomeDaClasse */
+        .tag {
+            color:rgb(4, 4, 116);
+            background-color:rgb(193, 255, 234);
+        }
+
+        /* Seletor de ID: "#"nomeDoId */
+        #aprovados {
+            color:rgb(230, 1, 39);
+            background-color:rgb(179, 252, 176);
+        }
+
+        /* Seletor de ID aninhado: "#"nomeDoId > div (quer dizer que irá pegar o elemento div que esteja diretamente dentro do Id especificado */
+        #aninhado > div {
+            background-color: yellowgreen;
+        }
+
+        /* Seletor de ID aninhado: "#"nomeDoId section (Pegará o descendente definido como segundo parâmetro nesse caso será o section */
+        #aninhado section {
+            background-color:darkseagreen;
+        }
+
+        /* Seletor de Irmãos gerais: (exemplo:) "p ~ ol" (Pegará o elemento que esta na mesma seção pai mesmo que não estejam próximos */
+        p ~ ol {
+            background-color:grey;
+        }
+
+        /* Seletor de Propriedade: (exemplo:) [feira] (Procurará todos os elementos que possui essa propriedade definida) */
+        [feira] {
+            color:royalblue;
+            background-color: sandybrown;
+        }
+
+        /* Seletor que envolve filho: (exemplo:) span:nth-child(1) (Pegará o primeiro(1) filho de algupem definido anteriormente (span) */
+        span:nth-child(1) {
+            background-color: sienna;
+        }
+
+        /* Seletor que envolve filhos impares(odd) ou pares(even): (exemplo:) section > :nth-child(even) (Pegará os filhos pares) */
+        section > :nth-child(even) {
+            background-color:slateblue;
+        }
+
+        /* Seletor de multiplas opcoes: (exemplo:) "section > :nth-child(odd), ul, p " (Para selecionar multiplas tags ao mesmo tempo basta separa-las por vírgula) */
+        section > :nth-child(odd), ul, p {
+            background-color:springgreen;
+        }
     </style>
 </head>
 
@@ -29,7 +85,7 @@
             </ol>
             <div id='aninhado' class='tag'>
                 <div class="tag">
-                    <section class='tag'>
+                    <section class='tag nolabel'>
                         <span class='tag'>1</span>
                         <p class='tag'>2</p>
                         <span class='tag'>3</span>
