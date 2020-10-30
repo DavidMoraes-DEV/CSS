@@ -5,9 +5,14 @@
     <meta charset="UTF-8">
     <title>Altura e Largura</title>
     <style>
+        html {
+            height: 100%;
+        }
         body {
             font-size: 40px;
             background-color: coral;
+            height: 100%;
+            margin: 0;
         }
 
         div {
@@ -16,6 +21,13 @@
 
         span {
             background-color: dodgerblue;
+        }
+
+        span, div {
+            width: 50%;
+            height: 60%; /* Nao iria aplicar a altura nem no span que ja era esperado mas tambem nao aplicara na div pois e um valor relativo demais, para que funcione assim, a tag body e html teria quer ser formatada com height: 100% para aí sim a div conseguir receber valor de 50%*/
+            height: 150px; /* Valores absolutos alterara a altura da div */
+            display: block; /* Para que seja aplicada a largura e altura indicada na tag span tem que colocar o "display: block", ou "display: inline-block" dependendo do caso */
         }
     </style>
 </head>
