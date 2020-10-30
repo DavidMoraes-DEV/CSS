@@ -6,6 +6,16 @@
     <style>
         body {
             font-size: 45px;
+            margin: 0;
+        }
+        div {
+            background-color: deepskyblue;
+            width: 100%; /* Definido como 100% para ocupar a tela inteira sem extrapolar para os lados, porem...*/
+            height: 300px;
+            padding: 100px; /* O padding sera somado ao tamanho do width então sera 100% + 100px o que fara com que extrapole o tamanho da pagina para os lados */
+            border: solid 20px; /* Mesma coisa com o border que somara com o tamanho definido do width e do padding fazendo extrapolar ainda mais para os lados */
+            box-sizing: border-box; /* Ja o "box-sizing: border-box" fara com que o width, padding e border sejam considerados para definir o tamanho da area, evitando que o tamanho extrapole para os lados, ajustando o tamanho na area disponivel da tela, vale ressaltar que essa propriedade por padrao nao e transmitida por heranca, para conseguir aplica-lo para todos os elemento e necessario utilizar um seletor universal "*" e aplicar o box-sizing: border-box dentro desse seletor universal */
+            text-align: center;
         }
     </style>
 </head>
