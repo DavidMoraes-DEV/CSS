@@ -5,7 +5,28 @@
     <meta charset="UTF-8">
     <title>Display</title>
     <style>
-        /* ... */
+        body {
+            font-size: 20px;
+            color: white;
+            background-color: coral;
+        }
+
+        ul { padding: 0; }
+        div { background-color: seagreen; }
+        span { background-color: dodgerblue;}
+        li { background-color: purple; }
+
+        /*No caso abaixo a tag span nao recebera algumas das alterações mesmo sendo incluida junto se nao aplicar o display: block*/
+        div, span, li {
+            width: 50%; /* Valor relativo de percentual */
+            width: 100px; /* Valor absoluto */
+            height: 40px;
+            padding-top: 15px;
+            text-align: center;
+            display: block; /* Display block significa que cada elemento tera sua linha */
+            display: inline; /* Display inline deixa na mesma linha elementos que nao quebram a linha por padrao, lembrando que com o display Inline nao será possível aplicar largura e altura para os componentes pois tudo isso será iginorado */
+            display: inline-block; /* Para conseguir aplicar largura e altura e possivel utilizar o display: inline-block que se comportara como um inline porém levara em consideracao coisas como o largura e altura */
+        }
     </style>
 </head>
 
