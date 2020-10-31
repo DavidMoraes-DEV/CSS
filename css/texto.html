@@ -16,14 +16,71 @@
             flex-direction: column;
             align-items: center;
         }
+
+        html {
+            font-size: 25px;
+        }
+
+        div {
+            font-size: 50px;
+        }
+
+        p {
+            /* Valores por padroes */
+            font-size: 1em;
+            font-size: 100%;
+            font-size: 16px;
+            font-size: 12pt;
+
+            /* Unidades Absolutas */
+            font-size: 50px; /* pixel */
+            font-size: 72pt; /* pontos */
+            font-size: 1in; /* polegadas */
+
+            /* Unidades relativas */
+            font-size: 2.2em; /* Nesse caso ele pegara como referencia a fonte mais proxima que no caso e a font da "div" no qual o "p" esta inserido */
+            font-size: 2.2rem; /*  Nesse caso ele pegara a referencia da raiz da pagina, ou seja, da tag html */
+            font-size: 50vh; /* Nao e muito comum utilizar as medidas de font baseadas em viewport */
+            font-size: 5vw;
+
+            font-family: monospace;
+            font-family: Georgia, serif;
+            font-family: verdana, sans-serif;
+            font-family: 'Indie Flower', cursive;
+
+            font-weight: 100; /*Peso da fonte (quanto maior o valor mais grossa a font sera)*/
+            font-style: italic;
+            text-transform: uppercase; /*Coloca todas as letras maiusculas*/
+            /*text-decoration: overline underline line-through; = Coloca linhas em cima(overline), embaixo(underline), no meio(line-through) */
+            word-spacing: 50px; /*Aplica espaco entre as palavras*/
+            letter-spacing: 20px; /*Aplica espaco entre as letras*/
+            text-align: center;
+        }
+
+        .botao {
+            font-size: 28px;
+            text-decoration: none; /*Tira a linha abaixo do link*/
+            padding: 10px 30px;
+            border-radius: 25px;
+        }
+
+        .destaque {
+            color: #fff;
+            background: tomato;
+            box-shadow: 2px 2px 1px 1px #000; /*Aplica uma sombra atraz do botao*/
+        }
+
+        .destaque:active {
+            box-shadow: none;
+        }
     </style>
 </head>
 
 <body>
     <div>
         <p>
-            Que texto
-            <br>legal!!!
+            Conceitos e Propriedades do
+            <br>Texto!!!
         </p>
     </div>
     <a href="http://google.com" class="botao destaque">Google</a>
