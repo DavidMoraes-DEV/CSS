@@ -4,12 +4,28 @@
     <meta charset="UTF-8">
     <title>Unidades #02</title>
     <style>
-        /* ... */
+        .div-pai {
+            position: relative;
+            background-color: orange;
+            width: 200px;
+            height: 200px;
+            padding: 20px;
+        }
+        .div-filho {
+            /*No caso da div filho ela se baseara de modo geral na div pai*/
+            background-color: mediumvioletred;
+            height: 50px;
+            width: 100%;
+            position: static; /* Ocupara apenas o espaco do conteudo dessa tag */
+            position: relative; /* Tambem ocupara apenas o espaco do conteudo */
+            position: absolute; /*No caso da posicao for absoluta nao sera apenas o conteudo mais sim o conteudo mais o padding, se tiver padding ele podera extrapolar a area pois ele levara em consideracao o tamanho do padding */
+            position: fixed; /* No caso da posicao fixa ele usara o tamanho do viewport e nao a div-pai */
+        }
     </style>
 </head>
 <body>
-    <div class="fora">
-        <div class="dentro"></div>
+    <div class="div-pai">
+        <div class="div-filho"></div>
     </div>
 </body>
 </html>
