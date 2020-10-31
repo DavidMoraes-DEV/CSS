@@ -8,14 +8,59 @@
         /* 
             https://www.w3schools.com/colors/colors_hsl.asp
             
-            https://coolors.co/
-            http://paletton.com/
+            Sites que ajuda na escolha de paletas de cores para o FrontEnd:
+            - https://coolors.co/
+            - http://paletton.com/
         */
+        body {
+            background-color: black;
+        }
+
+        div {
+            height: 35px;
+            text-align: center;
+            font-family: monospace;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+
+        div[div1] {    
+            background-color: green;
+        }
+        div[div2] {
+            background-color: #f67809; /* Valores no formato hexadecimal indo de 0 ate "f", sendo que seu intervalo para cada unidade eh a seguinte: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e, f), sendo que o zero é mais próximo do preto e "f" e a cor mais forte possivel, o formato hexadecimal e dividido em tres pares sendo: # f6 78 09 no qual a primeira posicao e o vermelho "f6" a segunda posicao e o verde "78" e a terceira posicao e o azul "09" */
+        }
+        div[div3] {
+            background-color: #abc; /* Quando os caracteres irmao for iguais podemos simplifica-lo por apenas um caracter cada, ficando: "#aabbcc" podemos apenas declarar: "#abc" */
+        }
+        div[div4] {
+            background-color: #edc91265; /* Tem a possibilidade de colocar transparencia na cor sendo a cor (#edc912) e o nivel de transparencia na frente (ff), sendo que ff nao aplica transparencia e 00 seria transparencia total, ou seja a cor nem aparecera, pois ficara totalmente transparente */
+        }
+        div[div5] {
+            background-color: rgb(55, 110, 220); /* Utilizando a funcao rgb se trabalha com as tres cores primarias (red, green, blue) na base decimal, indo de 0 ate 255, sendo  0 preto e 255 o maximo da cor em questao */
+        }
+        div[div6] {
+            background-color: rgba(55, 110, 220, .5); /* Mesmo conceito do rgb porem incluido a transparencia na area do "a", sendo que se aplicar por exemplo: 0.5 quer dizer que aplicara 50% de transparencia (apenas 0 seria transparencia total e 1.0 seria nenhuma transparencia) */
+        }
+        div[div7] {
+            background-color: hsl(299, 58%, 50%); /* Trabalhando com o (hue, saturation e lightness), sendo que o primeiro parametro vai de 0 ate 360 sendo referencia para a cor, o segundo parametro e a saturalcao definido como percentual indo 0% ate 100% sendo 0% escala de cinza e 100% seria a cor mais forte possivel, e o terceiro parametro e o nivel de brilho para a cor sendo um valor percentual tambem aonde 50% e a cor mais pura possivel, indo pro lado do 100% vai ficando mais claro ate chegar no branco e indo pro lado do 0% vai ficando escuro até chegar no 0% que ficara completamente preto */
+        }
+        div[div8] {
+            background-color: hsla(299, 58%, 50%, 0.5); /* Mesmo conceito do hsla porém o quarto parâmetro e o nivel de transparencia que sera aplicado */
+        }
     </style>
 </head>
 
 <body>
-
+    <div div1>Alternativa 01</div>
+    <div div2>Alternativa 02</div>
+    <div div3>Alternativa 03</div>
+    <div div4>Alternativa 04 - Com Transparencia</div>
+    <div div5>Alternativa 05</div>
+    <div div6>Alternativa 06 - Com Transparencia</div>
+    <div div7>Alternativa 07</div>
+    <div div8>Alternativa 08 - Com Transparencia</div>
 </body>
 
 </html>
