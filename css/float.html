@@ -11,18 +11,29 @@
 
         .c1 {
             background-color: red;
+            float: left; /* Vai para a esquerda e coloca o conteudo da esquerda para a direita */
+            float: right; /* Vai para a direita e coloca o conteudo da direita para a esquerda */
         }
 
         .c2 {
             background-color: green;
+            clear: right; /* Colocar essa propriedade para que o elemento considere a flutuação do c1 no qual foi aplicado o "float: right" limpando a flutuacao rigth, se nao os elementos nao consideraria a flutuacao do c1 */
+            float: left;
         }
         
         .c3 {
             background-color: blue;
+            clear: both; /* Aplicar o both na propriedade clear quando se quer limpar tanto o left quanto o right */
         }
 
         .c4 {
             background-color: orange;
+            float: right;
+        }
+
+        div {
+            height: 50px;
+            width: 50px;
         }
     </style>
 </head>
