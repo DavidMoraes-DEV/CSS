@@ -29,11 +29,27 @@
         */
 
         .unidades-absolutas {
+            position: absolute; /*Algumas propriedades so funcionam em position: absolute*/
             font-size: 50px;
+            padding: 20px;
+            border: solid 5px #222;
+            width: 20cm;
+            height: 20mm;
+            top: 150px; /* Distancia do topo da pagina (funciona se a posicao for absoluta) */
+            left: 200px; /* Distancia do lado esquerdo (funciona se a posicao for absoluta) */
+            
         }
 
         .unidades-relativas {
-            font-size: 2em;
+            font-size: 4em; /* (Eh uma boa pratica utilizar tamanho relativo) */
+            position: absolute;
+            padding: 3%;
+            border: solid 1vw #222; /* Nesse caso a vw representa 1 cem avos do tamanho do viewport */
+            margin: .8%;
+            width: 70vw;
+            height: 15vh;
+            bottom: 5%;
+            right: 5%;
         }
     </style>
 </head>
