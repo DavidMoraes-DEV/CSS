@@ -5,13 +5,42 @@
     <meta charset="UTF-8">
     <title>Unidades #01</title>
     <style>
-        /* ... */
+        /*
+        * UNIDADES:
+        - Absolutas: (Dimencao fixa pre-definida)
+            - px (Mais comum de ser utilizada)
+            - cm
+            - mm
+            - etc...
+
+        - Viewport: (Tamanho da pagina, e as medidas sera baseadas nesse tamanho)
+            - vh (Unidade relativa que trabalha com o tamanho da altura do viewport divido por 100)
+            - vw (Unidade relativa que trabalha com o tamanho da largura do viewport divido por 100)
+            - vmin (Unidade relativa que trabalha com a menor dimencao(largura ou altura) do viewport, ou seja se o menor lado do viewport for o eixo x o "vmin" sera esse eixo, se for o eixo y o "vmin" passara a ser esse outro eixo, podendo se alterar conforme o tamanho da pagina)
+            - vmax (Mesmo conceito do vmin, porem trabalha com a maior dimencao do viewport)
+        
+        - Font
+            - rem (Tamanho relativo, sendo que sera um tamanho relativo a raiz da pagina)
+            - em (Tamanho relativo, sendo que sera um tamanho relativo a fonte pai dessa fonte aonde colocou o tamanho relativo "em")
+            - etc..
+        
+        - Caso Especial
+            - % (Esse e um caso especial, pois dependendo do tipo de configuracao ele aplicara o percentual fazendo referencia com a propria tela, ou com o padding e etc...
+        */
+
+        .unidades-absolutas {
+            font-size: 50px;
+        }
+
+        .unidades-relativas {
+            font-size: 2em;
+        }
     </style>
 </head>
 
 <body>
-    <div class="unidades-absolutas">Opa!</div>
-    <div class="unidades-relativas">Epa!</div>
+    <div class="unidades-absolutas">Unidades Absolutas!</div>
+    <div class="unidades-relativas">Unidades Relativas!</div>
 </body>
 
 </html>
