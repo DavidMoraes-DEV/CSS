@@ -12,6 +12,21 @@
             border: solid 5px;
             display: none;
         }
+
+        /* Para declarar uma mediaQuery e necessario escrever: @media() e entre os parenteses colocar aquilo que quer utilizar como criterio para ser aplicado ou nao o que estiver dentro dessa mediaQuery */
+        @media (max-width: 600px) {
+            .muito-pequeno { display: block; } /* Essa classe apenas ira agir quando o criterio acima for verdadeiro */
+        }
+
+        /* A propriedade "orientation: portrait" significa que quando a orientacao for do tipo retrato OU tiver a largura maxima (max-width = 1000px) sera aplicado as propriedades que estao dentro desse mediaQuery */
+        @media (max-width: 1000px), (orientation: portrait) {
+            .pequeno-retrato { display: block; }
+        }
+
+        /* Ja nesse caso definimos um intervalo entre 500 e 1000px, sendo que SE estiver dentro desse intervalo executara as propriedades dentro do mediaQuery */
+        @media (min-width: 500px) and (max-width: 1000px) {
+            .intervalo { display: block; }
+        }
     </style>
 </head>
 <body>
