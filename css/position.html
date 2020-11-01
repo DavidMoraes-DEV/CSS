@@ -5,12 +5,69 @@
     <meta charset="UTF-8">
     <title>Position</title>
     <style>
-        /* ... */
+        div {
+            font-size: 30px;
+            padding: 15px;
+            border: solid 3px #222;
+            color: white;
+        }
+
+        .static {
+            top: 50px;
+            left: 50px; /* Como a posicao e static isso fara com que nem o top e nem o left sejam aplicados */
+            background-color: steelblue;
+        }
+
+        .fixed {
+            position: fixed; /* Deixara o elemento fixo na area definido mesmo se rolar a pagina para baixo ou para cima */
+            bottom: 30px;
+            right: 0px;
+            background-color: tomato;
+        }
+
+        .relative1 {
+            position: relative; /* Sera aplicado a formatacao de forma relativa ao elemento proximo(anterior) */
+            left: 50px;
+            top: 5px;
+            background-color: seagreen;
+        }
+
+        .absolute1 {
+            position: absolute; /* Ficara posicionado de forma absoluta e nao levara em consideracao elementos proximos, podendo passar por cima de outros elementos */
+            left: 350px;
+            top: 120px;
+            background-color: violet;
+        }
+
+        .relative2 {
+            position: relative;
+            left: 250px;
+            top: 2000px;
+            width: 200px;
+            height: 200px;
+            background-color: slategrey;
+        }
+
+        .absolute2 {
+           position: absolute; /* Ao manter um posicao absoluta dentro de uma tag(tag pai) com posicao relativa a posicao absoluta da tag filho(absolute2) sera baseada na posicao relativa da tag pai(relative2), caso contratio a posicao absoluta se basearia no tamanho da tela */
+           left: 10px;
+           top: 10px;
+           width: 20px;
+           height: 20px;
+           background-color: orange;
+        }
+
+        .sticky {
+            position: -webkit-sticky; /* Comando para aplicar a classe no safari */
+            position: sticky;
+            background-color: #777;
+            top: 10px;
+        }
     </style>
 </head>
 
 <body>
-    <div class="static">Static (Padrão)</div>
+    <div class="static">Static (Padrao)</div>
     <div class="fixed">Fixed</div>
     <div class="relative1">Relative</div>
     <div class="absolute1">Absolute</div>
