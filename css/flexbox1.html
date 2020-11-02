@@ -6,7 +6,52 @@
     <title>Flexbox #01</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        /* Flexbox e unidirecional trabalhando apenas na horizontal ou na vertical*/
+        div {
+            border: solid 5px dodgerblue;
+            font-size: 40px;
+            margin: 5px;
+        }
+
+        .big {
+            font-size: 1.5em;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: column; /* Ja que Por padrao o "flex-direction" vem como horizontal(linha) nesse exemplo foi alterado para vertical(coluna) */
+            flex-direction: column-reverse; /* Coloca o alinhamento na vertical com a ordem dos elementos invertida */
+            flex-direction: row-reverse; /* Coloca o alinhamento na horizontal com a ordem dos elementos invertida, e coloca os elementos no canto direito(rigth) da pagina */
+            flex-direction: row; /* Coloca o alinhamento na horizontal (padrao) */
+            width: 40%; /* Por padrao o alinhamento seguira na direcao definida e se extrapolar o tamanho ele fara um overflow e colocara os proximos elementos fora to tamanho definido da caixa */
+            flex-wrap: wrap; /* Para impedir esse overflow acima e possivel utilizar a quebra de linha atravez do "flex-wrap: wrap", isso fara com que o alinhamento dos elementos respeite o limite da caixa quebrando a linha e indo para a linha abaixo */
+            flex-wrap: wrap-reverse; /* Ira quebrar a linha porem colocara a proxima linha acima da anterior que foi completada */
+            height: 200px; /* Limitando a altura da caixa para que seja possivel quebrar em varias colunas no comando abaixo */
+            flex-flow: column-reverse wrap; /* Nessa propriedade Flex-flow e possivel misturar o direction e o wrap ao mesmo tempo */
+            flex-flow: row wrap; /* Nessa propriedade Flex-flow e possivel misturar o "flex-direction" com o "flex-wrap" aplicando os dois ao mesmo tempo */
+            
+            justify-content: flex-start; /* propriedade para justificar o conteudo, sendo que nesse exemplo esta justificando apartir do flex-start */
+            justify-content: flex-end; /* Justificando o conteudo pelo flex-end, ou seja sera justificado no final da area da caixa */
+            justify-content: center; /* Justificando no centro */
+            justify-content: space-around; /* Justificando os espacos envolta dos elementos para que os espacos fiquem uniformes */
+            flex-direction: row-reverse;
+            justify-content: space-between; /* Justificando os espacos no meio dos elementos */
+
+            /* Cross Axis (eixo secundario) */
+            height: 400px;
+            align-items: stretch; /* Valor stretch(esticar) e o padrao */
+            align-items: baseline; /* Valor baseline ira alinhar pela linha inferior(base) da fonte */
+            align-items: flex-start; /* Alinhar os itens pelo flex-start ira alinhar os itens tomando como base a parte superior da area do elemento */
+            align-items: flex-end; /* Alinhar os itens pelo flex-end ira alinhar os itens tomando como base a parte inferior da area do elemento  */
+            align-items: center; /* Alinhar os itens pelo center ira alinhar tomando como base o centro da area do elemento */
+
+            /* Mais de uma linha */
+            align-content: flex-start; /* Ira alinhar todos os itens de todas as linhas no inicio da caixa */
+            align-content: flex-end; /* Alinhara no final da caixa */
+            align-content: center; /* Alinhara no centro da caixa */
+            align-content: space-around; /* Alinhara os espacos envolta dos elmeentos */
+            align-content: space-between; /* Alinhara os espacos entre os elementos */
+        }
     </style>
 </head>
 
