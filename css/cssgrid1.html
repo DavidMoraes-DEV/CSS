@@ -24,6 +24,42 @@
             border: solid 5px dodgerblue;
             background: #fff;
         }
+
+        body {
+            display: grid;
+            grid-template-columns: 50% 50%; /* Divide a grid em duas colunas com area de 50% do total cada */
+            grid-template-columns: repeat(4, 8.33% 8.33% 8.33%); /* Nesse caso tera 12 colunas cada uma ocupando o espaco de 8.33% */
+            grid-template-columns: repeat(12, 8.33%);
+            grid-template-columns: repeat(11, 50px) 100px;
+
+            /* minmax(100px, 300px) */
+
+            grid-template-columns: 200px 20% 1fr; /* defidindo 3 colunas com valores diferentes sendo o primeiro valor absoluto o segundo percentual e o terceito por fragimento */
+            grid-template-columns: 3fr 6fr 3fr; /* definindo 3 colunas espaçnado cada coluna baseada em fragimentos */
+            grid-template-columns: 50% 25% 12.5% 12.5%;
+            grid-template-rows: 100px 1fr;
+            grid-template-rows: 50px auto auto auto;
+        }
+
+        .d8 {
+            grid-column-start: 2; /*Esse elemento iniciara apartir da coluna 1 linha 2*/
+            grid-column-end: 4;
+            grid-column-end: span 2;
+            grid-row-start: 3;
+            grid-row-end: 5;
+            grid-row-end: span 2;
+        }
+
+        .d10, .d11 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 5;
+            grid-row-end: span 1;
+        }
+
+        .d10 {
+            z-index: 10; /* define a ordem de profundidades dos elementos, quanto maior o numero maior o peso de prioridade */
+        }
     </style>
 </head>
 
