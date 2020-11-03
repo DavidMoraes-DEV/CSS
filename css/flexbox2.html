@@ -6,7 +6,50 @@
     <title>Flexbox #02</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        div {
+            border: solid 10px dodgerblue;
+            font-size: 40px;
+        }
+
+        .flex-container div {
+            box-sizing: border-box;
+        }
+
+        .flex-container {
+            display: flex;
+            height: 300px;
+            width: 600px;
+        }
+
+        /* Aplicara o estilo apenas do terceiro filho da classe definida: */
+        .flex-container div:nth-child(3) {
+            background-color: indianred;
+            order: 1; /* Essa propriedade permite manipular a ordem dos elementos, sendo que se colocar a ordem = 1 esse elemento passara a ter uma ordem maior que os outros(ordem = 0), sendo que os elementos que possui a maior ordem seram colocados por ultimo */
+            order: -1; /*No caso da ordem ser negativa esse elemento passara ter uma ordem menor do que todos os outros de ordem padrao 0 entao ele sera colocado a frente dos outros */
+            align-self: center; /* Alinha um elemento no centro de sua area */
+            align-self: flex-end; /* Alinha um elemento no fim de sua area */
+            align-self: flex-start; /* Alinha um elemento no inicio de sua area */
+            align-self: stretch; /* Valor padrao que estica o contor da area do elemento en volta de sua area */
+        }
+
+        .flex-container div {
+            width: 100px;
+            flex-grow: 0;
+            flex-grow: 1;
+        }
+
+        .flex-container div:nth-child(1) {
+            flex-grow: 2;
+        }
+
+        .flex-container {
+            width: 300px;
+            flex-shrink: 1; /* Encolhe o elemento de acordo com o valor da ordem */
+        }
+
+        .flex-container div:nth-child(1) {
+            flex-shrink: 5;
+        }
     </style>
 </head>
 
