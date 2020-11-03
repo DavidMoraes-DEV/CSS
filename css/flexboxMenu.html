@@ -54,6 +54,24 @@
         /* ==================== */
         /* Solução com Flex Box */
         /* ==================== */
+
+        .cabecalho {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .menu {
+            flex-grow: 10px;
+        }
+
+        .menu ul {
+            display: flex;
+        }
+
+        .menu li {
+            margin: 0px 10px;
+        }
     </style>
 </head>
 
@@ -61,7 +79,7 @@
     <header class="cabecalho">
         <div class="logo">
             <a href="#inicio">
-                <img src="http://files.cod3r.com.br/curso-web/logo.png" alt="Logo" />
+                <img src="./imagens/Logo.png" alt="Logo" />
             </a>
         </div>
         <nav class="menu">
